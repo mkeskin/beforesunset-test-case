@@ -1,6 +1,7 @@
 import '@styles/main.scss'
 
 import Header from '@components/Header'
+import Container from '@components/Container'
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +9,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <Header />
-        {children}
+        <Container>{children}</Container>
       </body>
     </html>
   )
