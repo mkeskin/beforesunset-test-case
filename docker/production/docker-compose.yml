@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  env-production:
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    image: env-production
+    ports:
+      - '3001:3000'
