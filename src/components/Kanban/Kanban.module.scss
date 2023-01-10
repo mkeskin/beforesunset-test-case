@@ -1,0 +1,108 @@
+.kanban {
+  .header {
+    display: flex;
+    padding: 30px 0;
+
+    .title {
+      font-size: 28px;
+      line-height: 25px;
+    }
+
+    .search-form {
+      display: flex;
+      align-items: flex-end;
+      margin-left: 20px;
+
+      .input {
+        margin: 0 5px;
+        border: none;
+        border-bottom: 1px solid #d8d8d8;
+        outline: none;
+      }
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-auto-columns: 280px;
+    grid-auto-flow: column;
+    grid-gap: 30px;
+
+    .column {
+      border-top-width: 4px;
+      border-top-style: solid;
+      border-top-color: var(--color);
+      border-radius: 5px;
+      overflow: hidden;
+
+      .cards {
+        display: grid;
+        grid-gap: 15px;
+        padding: 10px;
+        background-color: var(--bg-kanban-column);
+
+        .title {
+          padding: 10px 0;
+          font-size: 20px;
+        }
+
+        .card {
+          overflow: hidden;
+          background-color: var(--bg-kanban-card);
+          border-radius: 5px;
+
+          .heading {
+            padding: 15px 20px 15px 10px;
+            color: #707090;
+            font-size: 14px;
+          }
+
+          .info-publishing {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #aaaaaa;
+            font-size: 12px;
+          }
+
+          .info-counts {
+            display: flex;
+            margin-top: 20px;
+            column-gap: 15px;
+            align-items: center;
+            color: #aaaaaa;
+            font-size: 11px;
+            fill: #aaaaaa;
+
+            span {
+              display: flex;
+              align-items: center;
+
+              svg {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.collapse {
+  &[data-expanded='false'] {
+    .heading {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &[data-expanded='true'] {
+    .heading {
+      overflow: unset;
+      white-space: unset;
+      text-overflow: unset;
+    }
+  }
+}
