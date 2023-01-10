@@ -16,3 +16,13 @@ export const pluralize = (word: string): string => {
   // In all other cases, add "s" to the end of the word
   return `${word}s`
 }
+
+/**
+ * Formats a word usign with number as a plural string.
+ *
+ * @param {string} word - The word to pluralize
+ * @param {number} total - The total number of items
+ * @return {string} The formatted string
+ */
+export const plural = (word: string, total: number): string =>
+  total < 2 ? `${total} ${word}` : `${total} ${pluralize(word)}`
