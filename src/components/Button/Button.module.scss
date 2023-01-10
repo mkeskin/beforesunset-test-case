@@ -1,0 +1,15 @@
+.button {
+  padding: 4px 15px;
+  border: none;
+  font-size: var(--font-size);
+  border-radius: 3px;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &.black {
+    color: #ffffff;
+    background: #1e272e;
+  }
+}
