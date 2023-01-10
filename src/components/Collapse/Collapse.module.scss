@@ -1,0 +1,35 @@
+.collapse {
+  .header {
+    position: relative;
+    cursor: pointer;
+
+    .chevron {
+      position: absolute;
+      top: calc(50% - 6.5px);
+      right: 10px;
+      width: 8px;
+      height: 13px;
+      transition: rotate 0.3s ease-in-out;
+      rotate: 90deg;
+    }
+  }
+
+  .content {
+    opacity: 1;
+    height: max-content;
+    transition: height 0.5s ease-in-out, opacity 0.3 ease-in-out;
+  }
+
+  &.collapsed {
+    .header {
+      .chevron {
+        rotate: 0deg;
+      }
+    }
+
+    .content {
+      opacity: 0;
+      height: 0;
+    }
+  }
+}
