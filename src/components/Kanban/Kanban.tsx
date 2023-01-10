@@ -20,8 +20,6 @@ import { pluralize } from '@utils/string'
 import { random as randomColor } from '@utils/color'
 import useBookStore from '@store/book'
 
-// https://openlibrary.org/search.json?author=OL26320A&language=eng&fields=key,title,title_suggest,edition_count,first_publish_year,number_of_pages_median,author_name&mode=everything
-
 export type KanbanProps = {}
 
 type KanbanColumnProps = {
