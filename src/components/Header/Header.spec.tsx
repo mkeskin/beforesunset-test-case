@@ -4,8 +4,8 @@ import Header from './Header'
 
 describe('<Header>', () => {
   it('render the Header component', () => {
-    const rendered = render(<Header />)
-    const logo = rendered.getByTestId('main-logo')
+    const { getByAltText } = render(<Header />)
+    const logo = getByAltText('brewww')
 
     expect(logo).toBeInTheDocument()
   })

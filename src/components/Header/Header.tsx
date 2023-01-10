@@ -8,13 +8,7 @@ const Header = (props: HeaderProps) => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <Image
-          src="/brewww-logo.png"
-          alt="brewww"
-          width={113}
-          height={34}
-          data-testid="main-logo"
-        />
+        <Image src="/brewww-logo.png" alt="brewww" width={113} height={34} />
       </div>
     </div>
   )
